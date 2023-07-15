@@ -30,6 +30,7 @@ export const checkSession = async () => {
 export const logoutUser = async () => {
   try {
     const res = await axios.post('/api/logout');
+    console.log(res);
     return res.data.loggedOut;
   } catch (err) {
     console.log(err);
